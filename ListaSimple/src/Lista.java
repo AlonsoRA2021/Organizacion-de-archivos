@@ -44,23 +44,22 @@ public class Lista {
     }
 
     //Método para eliminar al inicio
-    public int eliminarAlInicio () {
-        int valor = inicio.dato;
+    public void eliminarAlInicio () {
+        int valorNodo = inicio.dato; //valorNodo funciona como un backup del nodo
         if (inicio == fin) {
             inicio = null;
             fin = null;
         }else{
             inicio = inicio.siguiente;
         }
-        return valor;
+        //return valorNodo;
     }
 
     //Método para eliminar al final
-    public int eliminarAlFinal () {
-        int valor = fin.dato;
+    public int eliminarAlFinal () { //Se usa int para retornar el valorNodo y mostrarlo (Opcional)
+        int valorNodo = fin.dato;
         if (inicio == fin) {
-            inicio = fin;
-            fin = null;
+            inicio = fin = null;
         }else{
             Nodo temporal = inicio;
             while (temporal.siguiente != fin) {
@@ -69,7 +68,7 @@ public class Lista {
             fin = temporal;
             fin.siguiente = null;
         }
-        return valor;
+        return valorNodo;
     }
 
 }
