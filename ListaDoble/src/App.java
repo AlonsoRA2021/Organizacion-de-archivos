@@ -46,13 +46,26 @@ public class App {
                  break;
                  
                  case 5:
-                 JOptionPane.showMessageDialog(null, "Aplicacion Finalizada");
+                 JOptionPane.showMessageDialog(null, "Se ha eliminado al inicio");
+                 lista.eliminarAlInicio();
                  break;
-                 
+
+                 case 6:
+                 JOptionPane.showMessageDialog(null, "Se ha eliminado al final");
+                 lista.eliminarAlFinal();
+                 break;
+
+                 case 7:
+                 JOptionPane.showMessageDialog(null, "Eliminando cualquiera");
+
+                 case 8:
+                 JOptionPane.showMessageDialog(null, "Hasta pronto");
+                 System.exit(0);
+
                  default:
                  JOptionPane.showMessageDialog(null, "Opcion Incorrecta");
                 }
-        } while (opcion != 5);
+        } while (opcion != 8);
     }
 
 }

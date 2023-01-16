@@ -52,4 +52,29 @@ public class Lista {
         }
     }
 
+    //Método para eliminar al inicio
+    public int eliminarAlInicio () {
+        int valor = fin.dato;
+        if (inicio == fin) {
+            inicio = fin;
+            fin = null;
+        }else{
+            inicio = inicio.siguiente;
+            inicio.anterior = null;
+        }
+        return valor;
+    }
+
+    //Método para eliminar al final
+    public int eliminarAlFinal () {
+        int valor = fin.dato;
+        if (inicio == fin) {
+            inicio = fin;
+            fin = null;
+        }else{
+            fin = fin.anterior;
+            fin.siguiente = null;
+        }
+        return valor;
+    }
 }
